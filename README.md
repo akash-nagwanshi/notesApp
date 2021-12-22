@@ -47,7 +47,7 @@ wget  https://github.com/akash-nagwanshi/notesApp/blob/main/noteapp.sh &&  chmod
 ```bash
 ./noteapp create note1  // to create note named as note1
 ```
-![alt text](images/create.png "Create notes")
+![alt text](images/create.png "Create notes") | width=100 
 
 ```bash
 ./noteapp add note1 // to add contents into note1
