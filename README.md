@@ -1,11 +1,11 @@
-
-# Bash :: Note-App
+# Bash :: Notes-App
 
 ## Overview 
-A simple note taking app in BASH.
+A simple **Note taking** and **TODO list** app in BASH.
+Quick and easy way to create notes and todo list using CLI.
 
 ## More with this
-* You can use this As README template.
+* You can use this as README template.
 * The script shows the power of the Linux Command line. Each line is doing its own things. More can be found with noteapp_doc.sh. This file contains lots of comments so that you can use individual lines too. 
 
 
@@ -25,60 +25,60 @@ A simple note taking app in BASH.
 
 
 ## Milestones
-* Make notes (✓)
+* **Make notes (✓)**
 
    Create notes on the fly.
 
-* Make tasks (✓)
+* **Make tasks (✓)**
   
   Create tasks. 
 
-* Tasks status (✓)
+* **Tasks status (✓)**
   
   Show completed tasks as Make  Bash Note App
 
 ## Usage
 
 ```bash
-wget  https://github.com/akash-nagwanshi/notesApp/blob/main/noteapp.sh &&  chmod a+x noteapp.sh
+wget  https://github.com/akash-nagwanshi/notesApp/blob/main/notesapp.sh &&  chmod a+x notesapp.sh
 ```
 
 ## List of commands
 ```bash
-./noteapp create note1  // to create note named as note1
+./notesapp create note1  // to create note named as note1
 ```
 ![alt text](images/create.png "Create notes") | width=100 
 
 ```bash
-./noteapp add note1 // to add contents into note1
+./notesapp add note1 // to add contents into note1
 ```
 ![alt text](images/add_note.png "Add notes")
 
 ```bash
-./noteapp show note1 // to show contents of note1
+./notesapp show note1 // to show contents of note1
 ```
 ![alt text](images/show_note.png "Show notes")
 
 
 ```bash
-./noteapp delete note1 // to delete note1
+./notesapp delete note1 // to delete note1
 ```
 
 ```bash
-./noteapp find note note1 // will check is there any note with named note1
+./notesapp find note note1 // will check is there any note with named note1
 ```
 ![alt text](images/find_note.png "Find notes")
 
 ```bash
-./noteapp find data “data to find” // to find data in all notes
+./notesapp find data “data to find” // to find data in all notes
 ```
 
 ```bash
-./noteapp add task 'task name'  // to add task
+./notesapp add task 'task name'  // to add task
 ```
 ![alt text](images/add_task.png "Add task")
 
 ```bash
-./noteapp show task // to show all task , and to manipulate them
+./notesapp show task // to show all task , and to manipulate them
 ```
 ![alt text](images/show_task.png "Show task")
