@@ -2,7 +2,7 @@
 
 ## Overview 
 A simple **Note taking** and **TODO list** app in BASH.
-Quick and easy way to create notes and todo list using CLI.
+Quick and easy way to create notes and todo list without leaving CLI.
 
 ## More with this
 * You can use this as README template.
@@ -11,7 +11,7 @@ Quick and easy way to create notes and todo list using CLI.
 
 ## Goals
 * Notes  : Create notes via CLI.
-* Tasks :  Create Task list.
+* Tasks :  Create Task/TODO list.
 
 
 ## Specifications
