@@ -13,9 +13,10 @@ if [ "$command" = "create" ]; then
 # if yes
 # do noting
 str=$(find . -name $action".note")
+# get name from file
 filename="${str%.*}"
-filename=${filename##*.}
-filename=${filename///}
+#filename=${filename##*.}
+#filename=${filename///}
 if [ "$action" = "$filename" ]; then
 echo "Already there..."
 
@@ -33,8 +34,8 @@ fi
 if [ "$command" = "add" ] && [ $# = 2 ] ; then  
 str=$(find . -name $action".note")
 filename="${str%.*}"
-filename=${filename##*.}
-filename=${filename///}
+#filename=${filename##*.}
+#filename=${filename///}
 if [ "$action" = "$filename" ]; then
 #echo "Already there..."
 while read lines
