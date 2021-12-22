@@ -9,6 +9,9 @@ fi
 
 # create a note with ext .note
 if [ "$command" = "create" ]; then  
+# first check if note is present or not
+# if yes
+# do noting
 str=$(find . -name $action".note")
 filename="${str%.*}"
 filename=${filename##*.}
@@ -16,6 +19,7 @@ filename=${filename///}
 if [ "$action" = "$filename" ]; then
 echo "Already there..."
 
+# else create a note, and add time stamp
 else
 touch $action".note"
 echo "note created : $action".note""
@@ -75,16 +79,19 @@ fi
 
 # find phrase in all notes
 if [ "$command" = "find" ] && [ $action = "data" ]; then  
+# find contents using grep
 grep -liR "$3" *
 fi
 
 # show note
 if [ "$command" = "show" ] && [ $# = 2 ] && [ $2 != "task" ]; then  
+# using cat command
 cat < "$action".note 
 fi
 
 # delete a note
 if [ "$command" = "delete" ] ; then  
+# using rm command
 rm "$action".note 
 fi
 
@@ -116,13 +123,16 @@ done
 menu() {
     i=1;
     echo "All Task''s:"
+	# list out all the task from all.task file
 	while read -r line; do name="$line"; 
 	echo "$i) $name" ; i=$((i+1)); done < all.task 
    }
 
 prompt="Check task (ENTER when done): "
 while menu && read -rp "$prompt" num && [[ "$num" ]]; do
+	# get the task based on num var
 	msg_task=$(sed "${num}q;d"  all.task)
+	# mark its as checked with strikthrough
 	msg_task_checked=$(echo -e "\e[9m$msg_task\e[0m")
 	flag=$(echo $?)
 	if [[ $msg_task == *"[0m"* ]]; then
