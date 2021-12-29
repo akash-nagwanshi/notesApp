@@ -78,7 +78,7 @@ fi
 fi
 
 
-# find phrase in all notes
+# find phrase/content in all notes.. it will find all 
 if [ "$command" = "find" ] && [ $action = "data" ]; then  
 # find contents using grep
 grep -liR "$3" *
@@ -121,10 +121,12 @@ for i in "${a[@]}"; do
 options+=("$i")
 done
 
+# a simple menu
 menu() {
     i=1;
     echo "All Task''s:"
 	# list out all the task from all.task file
+	# to show them in a nice list view
 	while read -r line; do name="$line"; 
 	echo "$i) $name" ; i=$((i+1)); done < all.task 
    }
